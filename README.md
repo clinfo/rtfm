@@ -22,9 +22,15 @@ We do not currently support other (non-Llama) language models.
 We recommend use of the provided `conda` environment. You can set it up with:
 
 ```shell
+cd rtfm
 conda env create -f environment.yml
 pip install --no-deps git+https://github.com/mlfoundations/tableshift.git
+cd tabliblib
+pip install -e .
 ```
+You should use the old version of punkt_tab resource. [[download link]](https://github.com/nltk/nltk_data/raw/gh-pages/packages/tokenizers/punkt_tab.zip) <br>
+The downloaded dir should be set `/home/usr/nltk_data/tokenizers/punked_tab/` in your own server (Linux example).
+
 # Quickstart - Inference
 
 If you want to interactively explore the model or want to try it on your own, unlabelled data, the best way to do this is by using the `inference.ipynb` notebook in `notebooks`. This notebook shows how to create simple DataFrames and use them for inference.
